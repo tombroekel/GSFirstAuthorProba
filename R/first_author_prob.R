@@ -1,4 +1,3 @@
-
 # === Load Necessary Libraries === #
 library(scholar)       # For fetching Google Scholar data
 library(openxlsx)      # For reading Excel files
@@ -6,7 +5,6 @@ library(tidyverse)     # For data manipulation
 
 # === Define Global Variables === #
 profile_id <- "jufWtGoAAAAJ"  # Google Scholar profile ID
-
 # Name to be analyzed last name
 placeholder_name <- "Broekel"
 scopus_list_path <- "data/scopus_list.xlsx"  # Path to journal whitelist
