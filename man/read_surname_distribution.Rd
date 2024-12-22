@@ -4,11 +4,9 @@
 \alias{read_surname_distribution}
 \title{Read and Process Surname Distribution}
 \usage{
-read_surname_distribution(file_name, placeholder_name)
+read_surname_distribution(placeholder_name)
 }
 \arguments{
-\item{file_name}{The name of the Excel file containing surname data (should be in the data directory).}
-
 \item{placeholder_name}{The name to use for alphabetical comparison.}
 }
 \value{

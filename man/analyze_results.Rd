@@ -4,14 +4,17 @@
 \alias{analyze_results}
 \title{Analyze Results}
 \usage{
-analyze_results(publications)
+analyze_results(publications, before_placeholder_percentage)
 }
 \arguments{
-\item{publications}{A data frame of processed publications.}
+\item{publications}{A data frame containing processed publication data.}
+
+\item{before_placeholder_percentage}{The percentage of names alphabetically before the target name.}
 }
 \value{
-A list of results including observed vs theoretical shares, first authorship analysis, and binomial test.
+A list of results, including statistical summaries and tests.
 }
 \description{
-This function calculates summary statistics and performs statistical tests on the processed publications data.
+This function summarizes the results of the authorship analysis, comparing observed vs. theoretical shares,
+first authorship rates, and performing a binomial test.
 }

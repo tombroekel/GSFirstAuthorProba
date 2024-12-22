@@ -6,5 +6,5 @@
 #' @return A data frame of publications.
 #' @export
 fetch_publications <- function(profile_id) {
-  get_publications(profile_id)
+  scholar::get_publications(profile_id)
 }

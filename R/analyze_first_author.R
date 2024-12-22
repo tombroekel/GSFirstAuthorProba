@@ -5,6 +5,9 @@
 #'
 #' @param profile_id The Google Scholar profile ID.
 #' @param last_name The last name of the author to analyze (e.g., "Broekel").
+#' @import dplyr
+#' @import tidyverse
+#' @import openxlsx
 #' @return A list of results including observed vs theoretical shares, first authorship analysis, and binomial test.
 #' @export
 analyze_first_author <- function(profile_id, last_name) {
@@ -41,14 +44,15 @@ analyze_first_author <- function(profile_id, last_name) {
     }))
 
   # Read and process surname distribution
-  surname_info <- read_surname_distribution("names.xlsx", last_name)
+  surname_info <- read_surname_distribution(last_name)
   before_placeholder_percentage <- surname_info$before_placeholder_percentage
 
   # Process authorship information
   publications <- process_authorship(publications, last_name, before_placeholder_percentage)
 
   # Analyze results
-  results <- analyze_results(publications)
+  results <- analyze_results(publications, before_placeholder_percentage)
+
 
   return(results)
 }
