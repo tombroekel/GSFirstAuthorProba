@@ -6,12 +6,12 @@ library(tidyverse)     # For data manipulation
 
 # === Define Global Variables === #
 profile_id <- "jufWtGoAAAAJ"  # Google Scholar profile ID
+
+# Name to be analyzed last name
+placeholder_name <- "Broekel"
 scopus_list_path <- "data/scopus_list.xlsx"  # Path to journal whitelist
 surname_distribution_path <- "data/names.xlsx"  # Path to surname distribution
 journal_mapping_path <- "data/journal_mapping.xlsx"  # Path to journal name mapping
-
-# Placeholder for the analyzed last name
-placeholder_name <- "Broekel"
 
 # === Fetch Google Scholar Publications === #
 publications <- get_publications(profile_id)
